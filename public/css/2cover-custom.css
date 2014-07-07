@@ -1,0 +1,249 @@
+/*
+A custom Bootstrap 3.1 template
+from http://bootply.com
+
+This CSS code should follow the 'bootstrap.css'
+in your HTML file.
+
+license: MIT
+author: bootply.com
+*/
+
+html,body {
+	height:100%;
+    background:center no-repeat fixed url('/assets/example/bg_suburb.jpg');
+  
+}
+
+.icon-bar {
+	background-color:#ff4c00;
+}
+
+/* Navigation bar color*/
+.navbar-trans {
+	background-color:#fff;
+	
+    color:#fff;
+}
+
+/* Active Background color of links in Navigation bar */ 
+.navbar-trans li>a:hover,.navbar-trans li>a:focus,.navbar-trans li.active {
+	background-color:#F1F0F0;
+	
+}
+
+/* Navigation bar links */
+.navbar-trans a{
+    color:#FF4C00;
+}
+
+
+.subcat li {
+	margin-left: 10px;
+
+}
+
+.navbar-trans .form-control:focus {
+	border-color: #eee;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(100,100,100,0.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(100,100,100,0.6);
+}
+
+section {
+	padding-top:70px;  
+    padding-bottom:50px; 
+    min-height:calc(100% - 1px);
+}
+
+.v-center {
+    padding-top:10%;
+    font-size: 50px;
+}
+  
+.well {
+	border-color:transparent;
+}
+
+a.list-group-item.active,[class*='-info'] {
+	background-color: #168ccc;
+    color:#FF4C00;
+}
+  
+#section1 {
+	background-color: #FF4C00;
+    color:#FFB798;
+}
+
+#section1 h1, h3{
+	color: #fff;
+}
+
+#section1 h1{
+	font-size: 55px;
+}  
+  
+#section2 {
+	background-color: #fff;
+    color:#686868;
+}
+
+#section2 h4, h1, h3{
+	 color:#686868;
+}
+  
+#section3 {
+	background-color: #FF4C00;
+    color:#FFB798;
+}
+
+#section3 h1, h3, h4{
+	color: #fff;
+}
+
+#section4 {
+	background-color: #fff;
+    color:#686868;
+}
+
+#section4 h4, h1, h3{
+	 color:#686868;
+}
+
+#section5,#section7 {
+	background-color: #FF4C00;
+    color:#FFB798;
+}
+
+#section5 h1, h3, h4{
+	color: #fff;
+}
+
+#section6 {
+	background-color: #fff;
+    color:#686868;
+}
+
+footer {
+	background-color:#494949;
+    color:#ddd;
+    min-height:100px;
+    padding-top:20px;
+    padding-bottom:40px;
+}
+
+footer .nav>li>a {
+    padding:3px;
+    color:#ccc;
+}
+
+footer .nav>li>a:hover {
+    background-color:transparent;
+	color:#fff;
+}
+
+
+
+
+
+
+/*****
+
+Custom Buttons
+
+*****/
+
+
+
+.btn-custom1 {
+  color: #fff;
+  background-color: #C63B00;
+  border-color: #C63B01;
+}
+.btn-custom1:hover,
+.btn-custom1:focus,
+.btn-custom1:active,
+.btn-custom1.active,
+.open > .dropdown-toggle.btn-custom1 {
+  color: #fff;
+  background-color: #A53100;
+  border-color: #A53101;
+}
+.btn-custom1:active,
+.btn-custom1.active,
+.open > .dropdown-toggle.btn-custom1 {
+  background-image: none;
+}
+.btn-custom1.disabled,
+.btn-custom1[disabled],
+fieldset[disabled] .btn-custom1,
+.btn-custom1.disabled:hover,
+.btn-custom1[disabled]:hover,
+fieldset[disabled] .btn-custom1:hover,
+.btn-custom1.disabled:focus,
+.btn-custom1[disabled]:focus,
+fieldset[disabled] .btn-custom1:focus,
+.btn-custom1.disabled:active,
+.btn-custom1[disabled]:active,
+fieldset[disabled] .btn-custom1:active,
+.btn-custom1.disabled.active,
+.btn-custom1[disabled].active,
+fieldset[disabled] .btn-custom1.active {
+  background-color: #C63B00;
+  border-color: #C63B01;
+}
+.btn-custom1 .badge {
+  color: #C63B00;
+  background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+.btn-custom2 {
+  color: #fff;
+  background-color: #FF7400;
+  border-color: #FF7401;
+}
+.btn-custom2:hover,
+.btn-custom2:focus,
+.btn-custom2:active,
+.btn-custom2.active,
+.open > .dropdown-toggle.btn-custom2 {
+  color: #fff;
+  background-color: #CA5B00;
+  border-color: #CA5B00;
+}
+.btn-custom2:active,
+.btn-custom2.active,
+.open > .dropdown-toggle.btn-custom2 {
+  background-image: none;
+}
+.btn-custom2.disabled,
+.btn-custom2[disabled],
+fieldset[disabled] .btn-custom2,
+.btn-custom2.disabled:hover,
+.btn-custom2[disabled]:hover,
+fieldset[disabled] .btn-custom2:hover,
+.btn-custom2.disabled:focus,
+.btn-custom2[disabled]:focus,
+fieldset[disabled] .btn-custom2:focus,
+.btn-custom2.disabled:active,
+.btn-custom2[disabled]:active,
+fieldset[disabled] .btn-custom2:active,
+.btn-custom2.disabled.active,
+.btn-custom2[disabled].active,
+fieldset[disabled] .btn-custom2.active {
+  background-color: #FF7400;
+  border-color: #FF7401;
+}
+.btn-custom2 .badge {
+  color: #FF7400;
+  background-color: #fff;
+}
