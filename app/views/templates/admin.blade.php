@@ -87,7 +87,7 @@
 			 @endif
 			<div class="collapse navbar-collapse">
 			  <ul class="nav navbar-nav">
-				<li><a href="/admin/users">Users</a></li>
+				<li><a href="/admin/users">Users!</a></li>
 				<li><a href="/admin/posts">Posts</a></li>
 				<li><a href="/admin/category">Categories</a></li>
 				<li><a href="/admin/subcategory">Subcategories</a></li>
