@@ -54,7 +54,7 @@ Route::post('admin/users/logout', 'UserController@logout');
 
 //resource controller routes- users, posts, category, subcategory
 Route::group(array('before' => 'auth'), function(){
-//Route::resource('admin/users', 'UserController');
+Route::resource('admin/users', 'UserController');
 
 Route::resource('admin/posts', 'PostController');
 
