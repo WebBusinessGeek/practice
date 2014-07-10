@@ -13,9 +13,9 @@
 
 <br/>
 
-	@if(!Auth::user()->admin == true)
+<!--	@if(!Auth::user()->admin == true)
 		{{'Sorry. Only admins can create new users'}}
-	@else 
+	@else -->
 		
 		{{ Form::open(array( 'url' =>'admin/users', 'class' => 'form-horizontal', 'role' => 'form', 'action' => 'UserController@store') ) }}
  
