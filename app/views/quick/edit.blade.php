@@ -12,9 +12,6 @@
 
 <br/>
 
-	@if(Auth::user()->id != $user->id && Auth::user()->admin != true)
-		{{'Sorry. Only admins can update other Author\'s profiles.'}}
-	@else
 		{{ Form::open(array( 'url' =>"admin/users/$user->id", 'class' => 'form-horizontal', 'role' => 'form', 'action' => 'UserController@update', 'files' => true) ) }}
 	 
 	 

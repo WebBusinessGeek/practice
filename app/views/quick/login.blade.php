@@ -8,10 +8,7 @@
 
 
 <!--email password -->
-	@if(Auth::check())
-		{{ 'you are already logged in' }}
-	@else
-
+	
 
 <br/>
 
