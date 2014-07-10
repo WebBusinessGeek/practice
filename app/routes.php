@@ -1,6 +1,6 @@
 <?php
 
-Route::resource('admin/users', 'UserController');
+
 
 
 
