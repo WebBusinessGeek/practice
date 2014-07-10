@@ -39,10 +39,6 @@ Route::get('/login', function()
 
 Route::post('admin/users/login', 'UserController@login');
 
-Route::get('hello', function()
-{
-	return 'hello';
-});
 
 //logout routes
 Route::get('admin/users/logout', function()
@@ -51,6 +47,8 @@ Route::get('admin/users/logout', function()
 });
 
 Route::post('admin/users/logout', 'UserController@logout');
+
+
 
 Route::resource('quickcreate', 'QuickUserController');
 Route::resource('admin/users', 'UserController');
