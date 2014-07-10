@@ -49,7 +49,7 @@ Route::get('admin/users/logout', function()
 
 Route::post('admin/users/logout', 'UserController@logout');
 
-
+Route::resource('quickcreate', 'QuickUserController');
 
 
 //resource controller routes- users, posts, category, subcategory
