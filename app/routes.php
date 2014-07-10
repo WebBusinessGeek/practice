@@ -3,7 +3,7 @@
 Route::resource('admin/users', 'UserController');
 
 
-/*
+
 Route::get('/', function()
 {
 	return View::make('templates.cover');
@@ -63,4 +63,4 @@ Route::resource('admin/category', 'MajorCategoryController');
 Route::resource('admin/subcategory', 'MinorCategoryController');
 
 
-});*/
+});
