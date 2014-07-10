@@ -54,14 +54,13 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'wbgcms',
-			'username'  => 'root',
-			'password'  => 'Washington12188',
+			'host'      => '107.170.10.122',
+			'database'  => '',
+			'username'  => 'forge',
+			'password'  => 'HK3LqlvvZXwKlY1GmY6g',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
-			'unix_socket' => '/tmp/mysql.sock',
 		),
 
 		'pgsql' => array(
