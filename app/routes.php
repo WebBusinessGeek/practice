@@ -39,7 +39,7 @@ Route::get('/login', function()
 
 Route::post('admin/users/login', 'UserController@login');
 
-Route::get('/hello', function()
+Route::get('hello', function()
 {
 	return 'hello';
 });
