@@ -39,7 +39,10 @@ Route::get('/login', function()
 
 Route::post('admin/users/login', 'UserController@login');
 
-
+Route::get('/hello', function()
+{
+	return 'hello';
+});
 
 //logout routes
 Route::get('admin/users/logout', function()
