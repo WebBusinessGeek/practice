@@ -17,7 +17,7 @@ Route::get('/admin', function()
 );
 	
 
-/*//login routes
+//login routes
 Route::get('admin/users/login', function()
 {
 	Session::flash('badMessage', 'You have to log in first');
@@ -43,7 +43,7 @@ Route::get('admin/users/logout', function()
 	return View::make('admin.users.logout');
 });
 
-Route::post('admin/users/logout', 'UserController@logout');*/
+Route::post('admin/users/logout', 'UserController@logout');
 
 Route::resource('admin/users', 'UserController');
 
