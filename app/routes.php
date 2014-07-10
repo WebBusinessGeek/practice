@@ -1,5 +1,7 @@
 <?php
 
+Route::resource('admin/users', 'UserController');
+
 Route::get('/', function()
 {
 	return View::make('templates.cover');
@@ -45,7 +47,7 @@ Route::get('admin/users/logout', function()
 
 Route::post('admin/users/logout', 'UserController@logout');
 
-Route::resource('admin/users', 'UserController');
+
 
 
 //resource controller routes- users, posts, category, subcategory
