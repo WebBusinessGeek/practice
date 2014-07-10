@@ -15,7 +15,7 @@
 
 	
 		
-		{{ Form::open(array( 'url' =>'admin/users', 'class' => 'form-horizontal', 'role' => 'form', 'action' => 'UserController@store') ) }}
+		{{ Form::open(array( 'url' =>'quickcreate', 'class' => 'form-horizontal', 'role' => 'form', 'action' => 'QuickUserController@store') ) }}
  
  
 			<input type="hidden" name="method" value="post">
