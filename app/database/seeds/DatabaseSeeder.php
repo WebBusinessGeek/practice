@@ -67,18 +67,22 @@ class MajorCategoryTableSeeder extends Seeder {
 
         MajorCategory::create(array(
         
+        		'id' => '1',
+        		
         		'title' => 'lead-generation',
         		
         		'imageName' => 'image-default',
         		
         		'oTitle' => 'Lead Generation'
         		
-        		
+        		'id' => '1',
         		)
         );
         
         
          MajorCategory::create(array(
+         
+         		'id' => '2',
         
         		'title' => 'customer-acquisition',
         		
@@ -92,6 +96,8 @@ class MajorCategoryTableSeeder extends Seeder {
         
         
          MajorCategory::create(array(
+         
+         		'id' => '3',
         
         		'title' => 'product-development',
         		
@@ -105,6 +111,8 @@ class MajorCategoryTableSeeder extends Seeder {
         
         
          MajorCategory::create(array(
+         
+         		'id' => '4',
         
         		'title' => 'business-management',
         		
@@ -117,6 +125,8 @@ class MajorCategoryTableSeeder extends Seeder {
         );
         
          MajorCategory::create(array(
+         
+         		'id' => '5',
         
         		'title' => 'terms-to-know',
         		
@@ -149,6 +159,8 @@ class MinorCategoryTableSeeder extends Seeder {
 		//SubCategories tied to Lead Generation
         MinorCategory::create(array(
         
+        		'id' => '1',
+        
         		'title' => 'direct-communication',
         		
         		'imageName' => 'image-default6',
@@ -162,6 +174,8 @@ class MinorCategoryTableSeeder extends Seeder {
         );
         
           MinorCategory::create(array(
+          
+          		'id' => '2',
         
         		'title' => 'link-building-for-traffic',
         		
@@ -176,6 +190,8 @@ class MinorCategoryTableSeeder extends Seeder {
         );
         
           MinorCategory::create(array(
+          
+          		'id' => '3',
         
         		'title' => 'email-marketing',
         		
@@ -191,6 +207,8 @@ class MinorCategoryTableSeeder extends Seeder {
         
         MinorCategory::create(array(
         
+        		'id' => '4',
+        
         		'title' => 'content-marketing',
         		
         		'imageName' => 'image-default9',
@@ -204,6 +222,8 @@ class MinorCategoryTableSeeder extends Seeder {
         );
         
          MinorCategory::create(array(
+         
+         		'id' => '5',
         
         		'title' => 'search-engine-optimization',
         		
@@ -219,6 +239,8 @@ class MinorCategoryTableSeeder extends Seeder {
         
         
          MinorCategory::create(array(
+         
+         		'id' => '6',
         
         		'title' => 'paid-advertising',
         		
@@ -236,6 +258,8 @@ class MinorCategoryTableSeeder extends Seeder {
         //Subcategories tied to Customer Acquisition
         MinorCategory::create(array(
         
+        		'id' => '7',
+        
         		'title' => 'landing-page-marketing',
         		
         		'imageName' => 'image-default12',
@@ -251,6 +275,8 @@ class MinorCategoryTableSeeder extends Seeder {
         
         
          MinorCategory::create(array(
+         
+         		'id' => '8',
         
         		'title' => 'customer-onboarding',
         		
@@ -265,6 +291,8 @@ class MinorCategoryTableSeeder extends Seeder {
         );
         
          MinorCategory::create(array(
+         
+         		'id' => '9',
         
         		'title' => 'conversion-optimization',
         		
@@ -279,6 +307,8 @@ class MinorCategoryTableSeeder extends Seeder {
         );
         
          MinorCategory::create(array(
+         
+         		'id' => '10',
         
         		'title' => 'product-demonstrations',
         		
@@ -294,6 +324,8 @@ class MinorCategoryTableSeeder extends Seeder {
          
          //SubCategories related to Product Development
          MinorCategory::create(array(
+         
+         		'id' => '11',
         
         		'title' => 'research-planning',
         		
@@ -309,6 +341,8 @@ class MinorCategoryTableSeeder extends Seeder {
         
         MinorCategory::create(array(
         
+        		'id' => '12',
+        		
         		'title' => 'product-design',
         		
         		'imageName' => 'image-default17',
@@ -322,6 +356,8 @@ class MinorCategoryTableSeeder extends Seeder {
         );
         
         MinorCategory::create(array(
+        
+        		'id' => '13',
         
         		'title' => 'software-development',
         		
@@ -337,6 +373,8 @@ class MinorCategoryTableSeeder extends Seeder {
         
         MinorCategory::create(array(
         
+        		'id' => '14',
+        
         		'title' => 'product-launch',
         		
         		'imageName' => 'image-default19',
@@ -350,6 +388,8 @@ class MinorCategoryTableSeeder extends Seeder {
         );
         
          MinorCategory::create(array(
+         
+         		'id' => '15',
         
         		'title' => 'growth-management',
         		
@@ -364,6 +404,8 @@ class MinorCategoryTableSeeder extends Seeder {
         );
         
           MinorCategory::create(array(
+          
+          		'id' => '16',
         
         		'title' => 'talent-management',
         		
@@ -378,6 +420,8 @@ class MinorCategoryTableSeeder extends Seeder {
         );
         
         MinorCategory::create(array(
+        
+        		'id' => '17',
         
         		'title' => 'capital-management',
         		
@@ -394,6 +438,8 @@ class MinorCategoryTableSeeder extends Seeder {
         //Subcategories for Terms to know 
         MinorCategory::create(array(
         
+        		'id' => '18',
+        		
         		'title' => 'terms-index',
         		
         		'imageName' => 'image-default23',
@@ -422,6 +468,8 @@ class PostTableSeeder extends Seeder {
 		
 		//SubCategories tied to Lead Generation
         Post::create(array(
+        		
+        		'id' => '1',
         
         		'title' => 'this-is-an-article-1',
         		
