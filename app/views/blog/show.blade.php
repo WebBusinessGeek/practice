@@ -17,7 +17,7 @@
 
                 <!-- the actual blog post: title/author/date/content -->
                 <h1>{{$post->oTitle}}</h1>
-                <p class="lead">by <a href="index.php" style="color:#FF4C00;">{{$post->user->name}}</a>
+                <p class="lead">by <a href="index.php" style="color:#FF4C00;">{{User::where('id', '=', $post->user_id)->first()->name}}</a>
                 </p>
                 <hr>
                 @if($post->imageName == true)
