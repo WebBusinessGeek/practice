@@ -50,19 +50,9 @@ Route::post('admin/users/logout', 'UserController@logout');
 
 
 
-Route::resource('quickcreate', 'QuickUserController');
-Route::resource('admin/users', 'UserController');
-
-Route::resource('admin/posts', 'PostController');
-
-Route::resource('admin/category', 'MajorCategoryController');
-
-Route::resource('admin/subcategory', 'MinorCategoryController');
-
-
 
 //resource controller routes- users, posts, category, subcategory
-/*Route::group(array('before' => 'auth'), function(){
+Route::group(array('before' => 'auth'), function(){
 Route::resource('admin/users', 'UserController');
 
 Route::resource('admin/posts', 'PostController');
@@ -72,5 +62,5 @@ Route::resource('admin/category', 'MajorCategoryController');
 Route::resource('admin/subcategory', 'MinorCategoryController');
 
 
-});*/
+});
 
