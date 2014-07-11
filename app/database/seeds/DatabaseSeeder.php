@@ -419,7 +419,7 @@ class PostTableSeeder extends Seeder {
         DB::table('posts')->delete();
 		
 		//SubCategories tied to Lead Generation
-        MinorCategory::create(array(
+        Post::create(array(
         
         		'title' => 'this-is-an-article-1',
         		
