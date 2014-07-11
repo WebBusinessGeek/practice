@@ -460,6 +460,10 @@ class PostTableSeeder extends Seeder {
         );
         
     }
+    
+    
+    
+    
 }
     
     
@@ -468,4 +472,4 @@ class PostTableSeeder extends Seeder {
     
     
 
-}
+
