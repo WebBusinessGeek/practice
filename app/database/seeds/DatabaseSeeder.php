@@ -13,7 +13,11 @@ class DatabaseSeeder extends Seeder {
 
 		$this->call('UserTableSeeder');
 		
+		$this->call('MajorCategoryTableSeeder');
+		
 		$this->command->info('User table seeded');
+		
+		$this->command->info('MajorCategory table seeded');
 	}
 
 }
@@ -39,8 +43,38 @@ class UserTableSeeder extends Seeder {
         
         )
         
-        
      );
+    }
+
+}
+
+
+class MajorCategoryTableSeeder extends Seeder {
+
+    public function run()
+    {
+        DB::table('majorCategories')->delete();
+
+        MajorCategory::create(array(
+        
+        		'title' => 'Lead-Generation',
+        		
+        		'imageName' => 'image-default',
+        		
+        		'oTitle' => 'Lead-Generation'
+        		
+        		
+        		)
+        );
+        
+       
+         
+        
+         
+         
+         
+         
+         
     }
 
 }
