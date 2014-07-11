@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder {
 		
 		$this->command->info('MinorCategory table seeded');
 		
-		$this->comman->info('Post table seeded');
+		$this->command->info('Post table seeded');
 	}
 
 }
