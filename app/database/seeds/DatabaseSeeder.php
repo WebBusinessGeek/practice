@@ -75,7 +75,7 @@ class MajorCategoryTableSeeder extends Seeder {
         		
         		'oTitle' => 'Lead Generation'
         		
-        		'id' => '1',
+        		
         		)
         );
         
