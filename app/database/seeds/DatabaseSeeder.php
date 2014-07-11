@@ -17,16 +17,20 @@ class DatabaseSeeder extends Seeder {
 		
 		$this->call('MinorCategoryTableSeeder');
 		
+		$this->call('PostTableSeeder');
+		
 		$this->command->info('User table seeded');
 		
 		$this->command->info('MajorCategory table seeded');
 		
 		$this->command->info('MinorCategory table seeded');
+		
+		$this->comman->info('Post table seeded');
 	}
 
 }
 
-
+//User Table Seeds 
 class UserTableSeeder extends Seeder {
 
     public function run()
@@ -52,7 +56,7 @@ class UserTableSeeder extends Seeder {
 
 }
 
-
+//MajorCategory Table Seeds 
 class MajorCategoryTableSeeder extends Seeder {
 
     public function run()
@@ -133,7 +137,7 @@ class MajorCategoryTableSeeder extends Seeder {
     }
 }
     
-    
+//MinorCategory Table Seeds 
 class MinorCategoryTableSeeder extends Seeder {
 
     public function run()
@@ -404,5 +408,63 @@ class MinorCategoryTableSeeder extends Seeder {
          
          
     }
+    
+
+//Post Table Seeds 
+class PostTableSeeder extends Seeder {
+
+    public function run()
+    {
+        DB::table('posts')->delete();
+		
+		//SubCategories tied to Lead Generation
+        MinorCategory::create(array(
+        
+        		'title' => 'this-is-an-article-1',
+        		
+        		'oTitle' => 'This is an Article 1',
+        		
+        		'subTitle' => 'Bonbon carrot cake cookie tiramisu lemon drops marzipan
+        						I love chupa chups. Tart I love bear claw I love biscuit chocolate cake donut. ', 
+        		
+        		'body' => 'Lollipop bear claw marzipan cake lemon drops muffin sweet caramels cheesecake. Tart icing
+        		 applicake chocolate pudding jujubes gummi bears ice cream I love. Sesame snaps croissant candy pudding
+        		  I love unerdwear.com apple pie. Bear claw sweet pie sugar plum unerdwear.com lollipop marzipan. I love
+        		   chocolate gummi bears jelly beans apple pie brownie liquorice. Apple pie I love icing muffin. I love halvah
+        			 tiramisu. Ice cream tiramisu bear claw marshmallow sugar plum unerdwear.com. Tootsie roll sweet roll
+        			  liquorice jelly-o I love. Topping marshmallow macaroon muffin sugar plum bonbon carrot cake I love. ',
+        		
+        		//choices 'What','Application','HowTo','Inspiration','Resources'
+        		'contentType' => 'What',
+        		
+        		//choices ONLY IF HOWTO CONTENTTYPE 'Research','Planning','Construction','Launch','Growth','None'
+        		'howToLifecycle' => 'None',
+        		
+        		'user_id' => '1',
+        		
+        		/*choices
+        		 1-DirComm, 2-LinkBuil, 3-Email, 4-ContMrk, 5-SEO, 6-PaidAd, 7-LandPageMrk, 8-CustOn, 9-ConvOpt,
+        		 10-ProdDemo, 11-Res&Plann, 12-ProdDes, 13-SoftDev, 14-ProdLau, 15-GrowMngmt, 16-TaleMngmt,
+        		 17-CapitalMgmt, 18-Termstoknow*/
+        		'minorCat_id' => '1',
+        		
+        		//0 or 1(true)
+        		'is_published' => '1',
+        		
+        		
+        		
+        		
+        		
+        		)
+        );
+        
+    }
+}
+    
+    
+    
+    
+    
+    
 
 }
