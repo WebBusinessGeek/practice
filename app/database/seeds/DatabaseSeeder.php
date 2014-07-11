@@ -131,6 +131,7 @@ class MajorCategoryTableSeeder extends Seeder {
          
          
     }
+}
     
     
 class MinorCategoryTableSeeder extends Seeder {
