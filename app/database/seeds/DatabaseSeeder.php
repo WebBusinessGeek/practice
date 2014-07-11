@@ -408,6 +408,7 @@ class MinorCategoryTableSeeder extends Seeder {
          
          
     }
+}
     
 
 //Post Table Seeds 
