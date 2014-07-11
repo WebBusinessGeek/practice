@@ -45,7 +45,9 @@ class UserTableSeeder extends Seeder {
         		
         		'password' => Hash::make('testtest'),
         		
-        		'admin' => '1'
+        		'admin' => '1',
+        		
+        		'id' => '1'
         
         
         
