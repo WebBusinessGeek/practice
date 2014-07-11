@@ -57,11 +57,62 @@ class MajorCategoryTableSeeder extends Seeder {
 
         MajorCategory::create(array(
         
-        		'title' => 'Lead-Generation',
+        		'title' => 'lead-generation',
         		
         		'imageName' => 'image-default',
         		
-        		'oTitle' => 'Lead-Generation'
+        		'oTitle' => 'Lead Generation'
+        		
+        		
+        		)
+        );
+        
+        
+         MajorCategory::create(array(
+        
+        		'title' => 'customer-acquisition',
+        		
+        		'imageName' => 'image-default2',
+        		
+        		'oTitle' => 'Customer Acquisition'
+        		
+        		
+        		)
+        );
+        
+        
+         MajorCategory::create(array(
+        
+        		'title' => 'product-development',
+        		
+        		'imageName' => 'image-default3',
+        		
+        		'oTitle' => 'Product Development'
+        		
+        		
+        		)
+        );
+        
+        
+         MajorCategory::create(array(
+        
+        		'title' => 'business-management',
+        		
+        		'imageName' => 'image-default4',
+        		
+        		'oTitle' => 'Business Management'
+        		
+        		
+        		)
+        );
+        
+         MajorCategory::create(array(
+        
+        		'title' => 'terms-to-know',
+        		
+        		'imageName' => 'image-default5',
+        		
+        		'oTitle' => 'Terms to know'
         		
         		
         		)
