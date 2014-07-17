@@ -405,7 +405,7 @@ Section Terms to Know 6
 
 <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
   <div class="container">
-    <button class="btn navbar-btn btn-success navbar-right">How can I help your business?</button>
+    <a href="http://kevwashington.me" class="btn navbar-btn btn-success navbar-right">How can I help your business?</a>
   </div>
 </nav>
 
