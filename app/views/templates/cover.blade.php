@@ -128,7 +128,7 @@ Section Main 1
     			<div class="col-md-4 text-center">
 					<h4 class="lead">{{ $category->oTitle}}</h4>
 					<!--<p><img src='/uploads/{{$category->imageName}}'></p>-->
-					<p><img src="http://placehold.it/250x150"></p>
+					<p><img src="/uploads/{{$category->imageName}}"></p>
 					<a class="btn btn-custom1"   href="/{{$links[$p]}}">Learn {{$category->oTitle}}</a>
 				</div>
 				<?php $p++; ?>
@@ -178,7 +178,7 @@ Section Lead Generation 2
     			<div class="col-md-4 text-center">
 					<h4 class="lead">{{ $category->oTitle}}</h4>
 					<!--<p><img src='/uploads/{{$category->imageName}}'></p>-->
-					<p><img src="http://placehold.it/250x150"></p>
+					<p><img src="/uploads/{{$category->imageName}}"></p>
 					<a class="btn btn-custom2"  href="/blog/{{$leadgen->title}}/{{$category->title}}">Learn {{$category->oTitle}}</a>
 				</div>
 				<?php $j++; ?>
@@ -232,7 +232,7 @@ Section Customer Acquisition 3
     			<div class="col-md-4 text-center">
 					<h4 class="lead">{{ $category->oTitle}}</h4>
 					<!--<p><img src='/uploads/{{$category->imageName}}'></p>-->
-					<p><img src="http://placehold.it/250x150"></p>
+					<p><img src="/uploads/{{$category->imageName}}"></p>
 					<a class="btn btn-custom1" href="/blog/{{$leadgen->title}}/{{$category->title}}">Learn {{$category->oTitle}}</a>
 				</div>
 				<?php $k++; ?>
@@ -288,7 +288,7 @@ Section Product Development 4
     			<div class="col-md-4 text-center">
 					<h4 class="lead">{{ $category->oTitle}}</h4>
 					<!--<p><img src='/uploads/{{$category->imageName}}'></p>-->
-					<p><img src="http://placehold.it/250x150"></p>
+					<p><img src="/uploads/{{$category->imageName}}"></p>
 					<a class="btn btn-custom2"  href="/blog/{{$leadgen->title}}/{{$category->title}}">Learn {{$category->oTitle}}</a>
 				</div>
 				<?php $l++; ?>
@@ -341,7 +341,7 @@ Section Business Management 5
     			<div class="col-md-4 text-center">
 					<h4 class="lead">{{ $category->oTitle}}</h4>
 					<!--<p><img src='/uploads/{{$category->imageName}}'></p>-->
-					<p><img src="http://placehold.it/250x150"></p>
+					<p><img src="/uploads/{{$category->imageName}}"></p>
 					<a class="btn btn-custom1" href="/blog/{{$leadgen->title}}/{{$category->title}}">Learn {{$category->oTitle}}</a>
 				</div>
 				<?php $m++; ?>
@@ -393,7 +393,7 @@ Section Terms to Know 6
     			<div class="col-md-4 text-center">
 					<h4 class="lead">{{ $category->oTitle}}</h4>
 					<!--<p><img src='/uploads/{{$category->imageName}}'></p>-->
-					<p><img src="http://placehold.it/250x150"></p>
+					<p><img src="/uploads/{{$category->imageName}}"></p>
 					<a class="btn btn-custom2"  href="/blog/{{$leadgen->title}}/{{$category->title}}">Learn {{$category->oTitle}}</a>
 				</div>
 				<?php $n++; ?>

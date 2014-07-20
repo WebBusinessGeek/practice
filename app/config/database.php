@@ -61,6 +61,17 @@ return array(
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
+			
+			/*'mysql' => array(
+			'driver'    => 'mysql',
+			'host'      => 'localhost',
+			'database'  => 'wbgcms',
+			'username'  => 'root',
+			'password'  => 'Washington12188',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+			'unix_socket' => '/tmp/mysql.sock',*/
 		),
 
 		'pgsql' => array(

@@ -71,7 +71,7 @@ class MajorCategoryTableSeeder extends Seeder {
         		
         		'title' => 'lead-generation',
         		
-        		'imageName' => 'image-default',
+        		'imageName' => 'lead-generation.png',
         		
         		'oTitle' => 'Lead Generation'
         		
@@ -86,7 +86,7 @@ class MajorCategoryTableSeeder extends Seeder {
         
         		'title' => 'customer-acquisition',
         		
-        		'imageName' => 'image-default2',
+        		'imageName' => 'customer-acquisition.png',
         		
         		'oTitle' => 'Customer Acquisition'
         		
@@ -101,7 +101,7 @@ class MajorCategoryTableSeeder extends Seeder {
         
         		'title' => 'product-development',
         		
-        		'imageName' => 'image-default3',
+        		'imageName' => 'product-development.png',
         		
         		'oTitle' => 'Product Development'
         		
@@ -116,7 +116,7 @@ class MajorCategoryTableSeeder extends Seeder {
         
         		'title' => 'business-management',
         		
-        		'imageName' => 'image-default4',
+        		'imageName' => 'business-management.png',
         		
         		'oTitle' => 'Business Management'
         		
@@ -130,7 +130,7 @@ class MajorCategoryTableSeeder extends Seeder {
         
         		'title' => 'terms-to-know',
         		
-        		'imageName' => 'image-default5',
+        		'imageName' => 'terms-to-know.png',
         		
         		'oTitle' => 'Terms to know'
         		
@@ -163,7 +163,7 @@ class MinorCategoryTableSeeder extends Seeder {
         
         		'title' => 'direct-communication',
         		
-        		'imageName' => 'image-default6',
+        		'imageName' => 'direct-communication.png',
         		
         		'major_id' => '1',
         		
@@ -179,7 +179,7 @@ class MinorCategoryTableSeeder extends Seeder {
         
         		'title' => 'link-building-for-traffic',
         		
-        		'imageName' => 'image-default7',
+        		'imageName' => 'link-building-traffic.png',
         		
         		'major_id' => '1',
         		
@@ -195,7 +195,7 @@ class MinorCategoryTableSeeder extends Seeder {
         
         		'title' => 'email-marketing',
         		
-        		'imageName' => 'image-default8',
+        		'imageName' => 'email-marketing.png',
         		
         		'major_id' => '1',
         		
@@ -211,7 +211,7 @@ class MinorCategoryTableSeeder extends Seeder {
         
         		'title' => 'content-marketing',
         		
-        		'imageName' => 'image-default9',
+        		'imageName' => 'content-managment.png',
         		
         		'major_id' => '1',
         		
@@ -227,7 +227,7 @@ class MinorCategoryTableSeeder extends Seeder {
         
         		'title' => 'search-engine-optimization',
         		
-        		'imageName' => 'image-default10',
+        		'imageName' => 'SEO.png',
         		
         		'major_id' => '1',
         		
@@ -244,7 +244,7 @@ class MinorCategoryTableSeeder extends Seeder {
         
         		'title' => 'paid-advertising',
         		
-        		'imageName' => 'image-default11',
+        		'imageName' => 'paid-advertising.png',
         		
         		'major_id' => '1',
         		
@@ -262,7 +262,7 @@ class MinorCategoryTableSeeder extends Seeder {
         
         		'title' => 'landing-page-marketing',
         		
-        		'imageName' => 'image-default12',
+        		'imageName' => 'landing-page-marketing.png',
         		
         		'major_id' => '2',
         		
@@ -280,7 +280,7 @@ class MinorCategoryTableSeeder extends Seeder {
         
         		'title' => 'customer-onboarding',
         		
-        		'imageName' => 'image-default14',
+        		'imageName' => 'customer-onboarding.png',
         		
         		'major_id' => '2',
         		
@@ -296,7 +296,7 @@ class MinorCategoryTableSeeder extends Seeder {
         
         		'title' => 'conversion-optimization',
         		
-        		'imageName' => 'image-default13',
+        		'imageName' => 'conversion-optimization.png',
         		
         		'major_id' => '2',
         		
@@ -312,7 +312,7 @@ class MinorCategoryTableSeeder extends Seeder {
         
         		'title' => 'product-demonstrations',
         		
-        		'imageName' => 'image-default15',
+        		'imageName' => 'product-demonstrations.png',
         		
         		'major_id' => '2',
         		
@@ -329,7 +329,7 @@ class MinorCategoryTableSeeder extends Seeder {
         
         		'title' => 'research-planning',
         		
-        		'imageName' => 'image-default16',
+        		'imageName' => 'research-planning.png',
         		
         		'major_id' => '3',
         		
@@ -345,7 +345,7 @@ class MinorCategoryTableSeeder extends Seeder {
         		
         		'title' => 'product-design',
         		
-        		'imageName' => 'image-default17',
+        		'imageName' => 'product-design.png',
         		
         		'major_id' => '3',
         		
@@ -361,7 +361,7 @@ class MinorCategoryTableSeeder extends Seeder {
         
         		'title' => 'software-development',
         		
-        		'imageName' => 'image-default18',
+        		'imageName' => 'software-development.png',
         		
         		'major_id' => '3',
         		
@@ -377,7 +377,7 @@ class MinorCategoryTableSeeder extends Seeder {
         
         		'title' => 'product-launch',
         		
-        		'imageName' => 'image-default19',
+        		'imageName' => 'product-launch.png',
         		
         		'major_id' => '3',
         		
@@ -387,13 +387,15 @@ class MinorCategoryTableSeeder extends Seeder {
         		)
         );
         
+        //subCategories for business management
+        
          MinorCategory::create(array(
          
          		'id' => '15',
         
         		'title' => 'growth-management',
         		
-        		'imageName' => 'image-default20',
+        		'imageName' => 'growth-management.png',
         		
         		'major_id' => '4',
         		
@@ -409,7 +411,7 @@ class MinorCategoryTableSeeder extends Seeder {
         
         		'title' => 'talent-management',
         		
-        		'imageName' => 'image-default21',
+        		'imageName' => 'talent-management.png',
         		
         		'major_id' => '4',
         		
@@ -425,7 +427,7 @@ class MinorCategoryTableSeeder extends Seeder {
         
         		'title' => 'capital-management',
         		
-        		'imageName' => 'image-default22',
+        		'imageName' => 'capital-management.png',
         		
         		'major_id' => '4',
         		
@@ -442,7 +444,7 @@ class MinorCategoryTableSeeder extends Seeder {
         		
         		'title' => 'terms-index',
         		
-        		'imageName' => 'image-default23',
+        		'imageName' => 'know.png',
         		
         		'major_id' => '5',
         		
