@@ -494,10 +494,10 @@ class PostTableSeeder extends Seeder {
                 $user_id = 1;
         
                 //title
-                $title = 'this-is-an-article-title'.$x;
+                $title = 'this-is-an-article-title';
         
                 //oTitle
-                $oTitle = 'This is an article title'.$x;
+                $oTitle = 'This is an article title';
         
                 //subTitle
                 $subTitle = 'Here is my very creative Sub Title. Read it and grow with envy!';
@@ -512,42 +512,83 @@ class PostTableSeeder extends Seeder {
         
       
                 //non-howTo articles
-                function nonHowTo($a,$b,$c,$d,$e,$f,$g,$h,$i){
+                function nonHowTo($a,$b,$c,$d,$e,$f,$g,$h,$i,$j){
                     
                     return [
                         'user_id' => $b,
 
-                        'title' => $c,
+                        'title' => $c.$a,
 
-                        'oTitle' => $d,
+                        'oTitle' => $d.$a,
 
                         'subTitle' => $e, 
 
                         'body' => $f,
 
                         //choices 'What','Application','HowTo','Inspiration','Resources'
-                        'contentType' => $g[$a],
+                        'contentType' => $g[$j],
 
                         //choices ONLY IF HOWTO CONTENTTYPE
-                        'howToLifecycle' => $h[5],
+                        'howToLifecycle' => 'None',
 
-                        'minorCat_id' => $a,
+                        'minorCat_id' => 1,
+
+                        //0 or 1(true)
+                        'is_published' => $i
+                    ];
+                }
+        
+                //howTo articles
+                function HowTo($a,$b,$c,$d,$e,$f,$g,$h,$i,$j){
+                    
+                    return [
+                        'user_id' => $b,
+
+                        'title' => $c.$a,
+
+                        'oTitle' => $d.$a,
+
+                        'subTitle' => $e, 
+
+                        'body' => $f,
+
+                        //choices 'What','Application','HowTo','Inspiration','Resources'
+                        'contentType' => $g[2],
+
+                        //choices ONLY IF HOWTO CONTENTTYPE
+                        'howToLifecycle' => $h[$j],
+
+                        'minorCat_id' => 1,
 
                         //0 or 1(true)
                         'is_published' => $i
                     ];
                 }
 
+            
             for($count = 0; $count < 18; $count++):
-                static $r = 0;
-                global $r;
-                if($r == 2):
-                    $r++;
+                static $x = 0;
+                static $y = 0;
+                static $z = 0;
+                static $aa = 19;
+                if($y == 2):
+                    $y++;
                 endif;
-                Post::create(nonHowTo($r, $user_id, $title, $oTitle, $subTitle, $body, $contentType, $howTo, $is_published));
-
-                $r++;
+                if($y == 5):
+                    $y = 0;
+                endif;
+                if($z == 5):
+                    $z = 0;
+                endif;
+                Post::create(nonHowTo($x, $user_id, $title, $oTitle, $subTitle, $body, $contentType, $howTo, $is_published,$y));
+                Post::create(HowTo($aa, $user_id, $title, $oTitle, $subTitle, $body, $contentType, $howTo, $is_published,$z));
+                $x++;
+                $y++;
+                $z++;
+                $aa++;
             endfor;
+            
+            
         
         
         
