@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 
   <head>
     <meta charset="utf-8">
@@ -10,6 +10,10 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>WebBusinessGeek</title>
+      
+    <!-- Angular -->
+    <script src="/js/angular/angular.min.js"></script>
+    <script src="/js/angular/app.js"></script>
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -119,7 +123,7 @@
             <div class="content-header">
                     <a id="menu-toggle" href="#" class="btn btn-default"><span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
-           
+            
            @yield('content')
 
       <!-- Bootstrap core JavaScript

@@ -467,50 +467,119 @@ class PostTableSeeder extends Seeder {
     public function run()
     {
         DB::table('posts')->delete();
-		
-		//SubCategories tied to Lead Generation
-        Post::create(array(
-        		
-        		'id' => '1',
         
-        		'title' => 'this-is-an-article-1',
-        		
-        		'oTitle' => 'This is an Article 1',
-        		
-        		'subTitle' => 'Bonbon carrot cake cookie tiramisu lemon drops marzipan
-        						I love chupa chups. Tart I love bear claw I love biscuit chocolate cake donut. ', 
-        		
-        		'body' => 'Lollipop bear claw marzipan cake lemon drops muffin sweet caramels cheesecake. Tart icing
+        //create arrays
+        
+                //content types
+                $contentType = [
+                    'What','Application','HowTo','Inspiration','Resources'
+                ];
+        
+                //howTo Lifecycle
+                $howTo = [
+                    'Research','Planning','Construction','Launch','Growth','None'
+                ]
+                
+                //minorCategories
+                $minorCats = [
+                  1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+                ];
+        
+        //create variables
+                //counter
+                $x = 0;
+        
+                //published?
+                $is_published = true;
+        
+                //user_id
+                $user_id = 1;
+        
+                //title
+                $title = 'this-is-an-article-title'.$x;
+        
+                //oTitle
+                $oTitle = 'This is an article title'.$x;
+        
+                //subTitle
+                $subTitle = 'Here is my very creative Sub Title. Read it and grow with envy!';
+        
+                //body
+                $body = 'Lollipop bear claw marzipan cake lemon drops muffin sweet caramels cheesecake. Tart icing
         		 applicake chocolate pudding jujubes gummi bears ice cream I love. Sesame snaps croissant candy pudding
         		  I love unerdwear.com apple pie. Bear claw sweet pie sugar plum unerdwear.com lollipop marzipan. I love
         		   chocolate gummi bears jelly beans apple pie brownie liquorice. Apple pie I love icing muffin. I love halvah
         			 tiramisu. Ice cream tiramisu bear claw marshmallow sugar plum unerdwear.com. Tootsie roll sweet roll
-        			  liquorice jelly-o I love. Topping marshmallow macaroon muffin sugar plum bonbon carrot cake I love. ',
+        			  liquorice jelly-o I love. Topping marshmallow macaroon muffin sugar plum bonbon carrot cake I love. ';
+        
+        
+        //non HowTo articles
+		if($x == 2):
+            $x++;
+        endif;
+        Post::create(array(
+        		
+        		'id' => $user_id,
+        
+        		'title' => $title,
+        		
+        		'oTitle' => $oTitle,
+        		
+        		'subTitle' => $subTitle, 
+        		
+        		'body' => $body,
         		
         		//choices 'What','Application','HowTo','Inspiration','Resources'
-        		'contentType' => 'What',
+        		'contentType' => $contentType[$x],
         		
-        		//choices ONLY IF HOWTO CONTENTTYPE 'Research','Planning','Construction','Launch','Growth','None'
-        		'howToLifecycle' => 'None',
+        		//choices ONLY IF HOWTO CONTENTTYPE
+        		'howToLifecycle' => $howTo[5],
         		
-        		'user_id' => '1',
+        		'user_id' => $user_id,
         		
-        		/*choices
-        		 1-DirComm, 2-LinkBuil, 3-Email, 4-ContMrk, 5-SEO, 6-PaidAd, 7-LandPageMrk, 8-CustOn, 9-ConvOpt,
-        		 10-ProdDemo, 11-Res&Plann, 12-ProdDes, 13-SoftDev, 14-ProdLau, 15-GrowMngmt, 16-TaleMngmt,
-        		 17-CapitalMgmt, 18-Termstoknow*/
-        		'minorCat_id' => '1',
+        		'minorCat_id' => [$x],
         		
         		//0 or 1(true)
-        		'is_published' => '1',
+        		'is_published' => $is_published,
         		
-        		
-        		
-        		
-        		
+        	
         		)
         );
+        $x++;
         
+        
+        if($x == 2):
+            $x++;
+        endif;
+        Post::create(array(
+        		
+        		'id' => $user_id,
+        
+        		'title' => $title,
+        		
+        		'oTitle' => $oTitle,
+        		
+        		'subTitle' => $subTitle, 
+        		
+        		'body' => $body,
+        		
+        		//choices 'What','Application','HowTo','Inspiration','Resources'
+        		'contentType' => $contentType[$x],
+        		
+        		//choices ONLY IF HOWTO CONTENTTYPE
+        		'howToLifecycle' => $howTo[5],
+        		
+        		'user_id' => $user_id,
+        		
+        		'minorCat_id' => [$x],
+        		
+        		//0 or 1(true)
+        		'is_published' => $is_published,
+        		
+        	
+        		)
+        );
+        $x++;
     }
     
     
