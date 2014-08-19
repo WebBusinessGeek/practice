@@ -478,7 +478,7 @@ class PostTableSeeder extends Seeder {
                 //howTo Lifecycle
                 $howTo = [
                     'Research','Planning','Construction','Launch','Growth','None'
-                ]
+                ];
                 
                 //minorCategories
                 $minorCats = [
@@ -486,9 +486,7 @@ class PostTableSeeder extends Seeder {
                 ];
         
         //create variables
-                //counter
-                $x = 0;
-        
+               
                 //published?
                 $is_published = true;
         
@@ -512,74 +510,47 @@ class PostTableSeeder extends Seeder {
         			 tiramisu. Ice cream tiramisu bear claw marshmallow sugar plum unerdwear.com. Tootsie roll sweet roll
         			  liquorice jelly-o I love. Topping marshmallow macaroon muffin sugar plum bonbon carrot cake I love. ';
         
+      
+                //non-howTo articles
+                function nonHowTo($a,$b,$c,$d,$e,$f,$g,$h,$i){
+                    
+                    return [
+                        'user_id' => $b,
+
+                        'title' => $c,
+
+                        'oTitle' => $d,
+
+                        'subTitle' => $e, 
+
+                        'body' => $f,
+
+                        //choices 'What','Application','HowTo','Inspiration','Resources'
+                        'contentType' => $g[$a],
+
+                        //choices ONLY IF HOWTO CONTENTTYPE
+                        'howToLifecycle' => $h[5],
+
+                        'minorCat_id' => $a,
+
+                        //0 or 1(true)
+                        'is_published' => $i
+                    ];
+                }
+
+            for($count = 0; $count < 18; $count++):
+                static $r = 0;
+                global $r;
+                if($r == 2):
+                    $r++;
+                endif;
+                Post::create(nonHowTo($r, $user_id, $title, $oTitle, $subTitle, $body, $contentType, $howTo, $is_published));
+
+                $r++;
+            endfor;
         
-        //non HowTo articles
-		if($x == 2):
-            $x++;
-        endif;
-        Post::create(array(
-        		
-        		'id' => $user_id,
-        
-        		'title' => $title,
-        		
-        		'oTitle' => $oTitle,
-        		
-        		'subTitle' => $subTitle, 
-        		
-        		'body' => $body,
-        		
-        		//choices 'What','Application','HowTo','Inspiration','Resources'
-        		'contentType' => $contentType[$x],
-        		
-        		//choices ONLY IF HOWTO CONTENTTYPE
-        		'howToLifecycle' => $howTo[5],
-        		
-        		'user_id' => $user_id,
-        		
-        		'minorCat_id' => [$x],
-        		
-        		//0 or 1(true)
-        		'is_published' => $is_published,
-        		
-        	
-        		)
-        );
-        $x++;
         
         
-        if($x == 2):
-            $x++;
-        endif;
-        Post::create(array(
-        		
-        		'id' => $user_id,
-        
-        		'title' => $title,
-        		
-        		'oTitle' => $oTitle,
-        		
-        		'subTitle' => $subTitle, 
-        		
-        		'body' => $body,
-        		
-        		//choices 'What','Application','HowTo','Inspiration','Resources'
-        		'contentType' => $contentType[$x],
-        		
-        		//choices ONLY IF HOWTO CONTENTTYPE
-        		'howToLifecycle' => $howTo[5],
-        		
-        		'user_id' => $user_id,
-        		
-        		'minorCat_id' => [$x],
-        		
-        		//0 or 1(true)
-        		'is_published' => $is_published,
-        		
-        	
-        		)
-        );
-        $x++;
     }
     
     
