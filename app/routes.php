@@ -48,10 +48,25 @@ Route::get('admin/users/logout', function()
 
 Route::post('admin/users/logout', 'UserController@logout');
 
-Route::get('/artic/post/', function(){
+
+
+
+Route::get('/artic/ajax/', function(){
     
     return Post::all()->toArray();
 });
+
+
+Route::get('/category/ajax/', function(){
+    
+    return MinorCategory::all()->toArray();
+});
+
+
+
+
+
+
 
 //resource controller routes- users, posts, category, subcategory
 Route::group(array('before' => 'auth'), function(){
