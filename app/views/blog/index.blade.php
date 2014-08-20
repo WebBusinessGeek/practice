@@ -14,6 +14,7 @@
 			</div>
     	</div>
  <!--   </div>-->
+
 		
  <!-- Keep all page content within the page-content inset div! -->
            <!-- <div class="page-content inset">
@@ -43,9 +44,11 @@
                 
    					
    				
-   					 <div class="row">
+   					 <div class="row" ng-controller="indexController">
         
-        
+                        <<< hands >>> <<< pickle('money') >>> 
+                         
+                         
         				
 						<div class="col-md-6">
 						

@@ -9,6 +9,7 @@ class PostController extends \BaseController {
 	 */
 	public function index()
 	{
+        
 		$posts = Post::all();
 		return View::make('admin/posts/index')->with('posts', $posts);
 	}
@@ -198,5 +199,8 @@ class PostController extends \BaseController {
 		return Redirect::to('admin/posts/')->with('successMessage', $successMessage);
 	}
 
+    public function check(){
+        return Post::all()->toArray();
+    }
 
 }

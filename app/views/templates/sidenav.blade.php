@@ -10,10 +10,17 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>WebBusinessGeek</title>
-    <!-- test -->  
+    
     <!-- Angular -->
     <script src="/js/angular/angular.min.js"></script>
     <script src="/js/angular/app.js"></script>
+      
+    <!-- Angular Controllers -->
+    <script src="/js/angular/controllers/indexcontroller.js"></script>
+    
+    <!-- Angular Services -->
+    
+      
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -123,6 +130,10 @@
             <div class="content-header">
                     <a id="menu-toggle" href="#" class="btn btn-default"><span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
+            <!-- Angular test -->
+            <input type="text" ng-model="test"> <<< test >>>
+            
+            
             
            @yield('content')
 
