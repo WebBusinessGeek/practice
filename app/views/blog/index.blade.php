@@ -48,6 +48,9 @@
         
                         <<< hands >>> <<< pickle('money') >>> 
                          
+                        <div>
+                            <li ng-repeat="post in posts | filter:post.contentType = 'how' "><a href='#' class="articleLink"> <<< post.contentType>>> </a></li>
+                         </div>
                          
         				
 						<div class="col-md-6">

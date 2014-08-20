@@ -9,10 +9,13 @@ indexCtrl.controller('indexController', function($scope, $http){
     }; 
     
    
-    $http.get('/artic/post/');
-        
-    }
+    $http.get('/artic/post/').success(function(data){
+        $scope.posts = data;
+        $scope.contentType = $scope.posts.contentType;
+    });
     
     
-);
+  
+    
+});
 
