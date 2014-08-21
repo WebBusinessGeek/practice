@@ -19,15 +19,12 @@
    				
    					 <div class="row" ng-controller="indexController">
         
-                        <<< hands >>> <<< pickle('money') >>> 
+                        <<< hands >>> <<< pickle('money') >>>  <<< currentCategory >>></currentCategory>
                          
                         <div>
-                            <li ng-repeat="post in posts | filter:post.contentType = 'how' "><a href='#' class="articleLink"> <<< post.title >>> </a></li>
+                            <li ng-repeat="post in posts | matchIt:posts:currentCategory"> <<< post.title >>> </li>
                          </div>
                          
-        				    <<< currentUrl >>>
-                         
-                         <<< categories[1].title>>>
 						<div class="col-md-6">
 						
 							<!-- What -->

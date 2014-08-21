@@ -1,6 +1,6 @@
 //(function(){
 
-var app = angular.module('myApp', ['setup', 'indexCtrl']);
+var app = angular.module('myApp', ['setup', 'indexCtrl', 'appFilters']);
 
      
 

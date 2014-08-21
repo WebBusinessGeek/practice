@@ -20,6 +20,8 @@
     
     <!-- Angular Services -->
     
+    <!-- Angular Filters -->
+    <script src="/js/angular/filters/filters.js"></script>
       
 
     <!-- Bootstrap core CSS -->
