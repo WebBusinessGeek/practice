@@ -7,9 +7,10 @@
 
 @section('content')
 	<!--<div  class="content-header">-->
+<div ng-controller="indexController">
 		<div class="row">
 			<div class="col-md-12">
-		<div style="color:#FF4C00;"><h1 class="lead" style="font-size: 45px; margin-bottom: -30px;">{{ $subCategory->oTitle }} </h1></div>
+		<div style="color:#FF4C00;"><h1 class="lead" style="font-size: 45px; margin-bottom: -30px;"><<< currentCategoryName >>></h1></div>
 			<h1 ><small>And <em>pretty much</em> everything you need to know about it...</small></h1>
 			</div>
     	</div>
@@ -17,24 +18,24 @@
 
    					
    				
-   					 <div class="row" ng-controller="indexController">
+   					 <div class="row">
         
                         <<< hands >>> <<< pickle('money') >>>  <<< currentCategoryId >>>
                          
                         <div> <h4>What Articles in Category: <<< currentCategoryId >>> with Angular </h4>
-                          <li ng-repeat="post in posts | matchCategory:currentCategoryId | matchContentType:'Application'   "> <<< post.title >>> <<< post.contentType >>> </li>
+                          <li ng-repeat="post in posts | matchCategory:currentCategoryId | matchContentType:'What' "> <<< post.title >>> <<< post.contentType >>> </li>
                          </div>
                               
                               <div> <h4>Application Articles in Category: <<< currentCategoryId >>> with Angular </h4>
-                          <li ng-repeat="post in posts | filter: post.contentType = 'Application' "> <<< post.title >>> <<< post.contentType >>> </li>
+                          <li ng-repeat="post in posts | matchCategory:currentCategoryId | matchContentType:'Application' "> <<< post.title >>> <<< post.contentType >>> </li>
                          </div>
                               
                         <div> <h4>Inspiration Articles in Category: <<< currentCategoryId >>> with Angular </h4>
-                          <li ng-repeat="post in posts | filter: post.contentType = 'Inspiration' "> <<< post.title >>> <<< post.contentType >>> </li>
+                          <li ng-repeat="post in posts | matchCategory:currentCategoryId | matchContentType: 'Inspiration' "> <<< post.title >>> <<< post.contentType >>> </li>
                          </div>
                               
                          <div> <h4>Resources Articles in Category: <<< currentCategoryId >>> with Angular </h4>
-                          <li ng-repeat="post in posts | filter: post.contentType = 'Resources' "> <<< post.title >>> <<< post.contentType >>> </li>
+                          <li ng-repeat="post in posts | matchCategory:currentCategoryId | matchContentType: 'Resources' "> <<< post.title >>> <<< post.contentType >>> </li>
                          </div>
                               
                          <div> <h4>HowTo Articles in Category: <<< currentCategoryId >>> with Angular </h4>
@@ -102,7 +103,7 @@
 							 		<li>{{'Sorry no articles yet'}}</li>
 							 	@endif
 							 </ul>
-							   
+							  
 							   
 							<br/><br/>
 							<!-- Inspiration -->
@@ -231,7 +232,7 @@
            <br/>
 
 
-
+</div>
 
 
 

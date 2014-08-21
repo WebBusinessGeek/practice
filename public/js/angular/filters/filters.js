@@ -2,7 +2,7 @@ var appfilters = angular.module('appFilters', []);
 
 
 appfilters.filter('matchCategory', function(){
-    return function(data, category) {
+    return function(data,category) {
         var filtered = [];
         if(!category){
             console.log('no category provided');
@@ -20,7 +20,7 @@ appfilters.filter('matchCategory', function(){
 
 
 appfilters.filter('matchContentType', function(){
-    return function(data, contentType){
+    return function(data,contentType){
         var filtered = [];
         if(!contentType){
             console.log('no contentType provided');
@@ -37,7 +37,7 @@ appfilters.filter('matchContentType', function(){
 });
 
 appfilters.filter('matchhowToLifecycle', function(){
-    return function(data, howToLifecycle){
+    return function(data,howToLifecycle){
         var filtered = [];
         if(!howToLifecycle){
             console.log('no howToLifecycle provided');
