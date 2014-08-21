@@ -19,10 +19,26 @@
    				
    					 <div class="row" ng-controller="indexController">
         
-                        <<< hands >>> <<< pickle('money') >>>  <<< currentCategory >>></currentCategory>
+                        <<< hands >>> <<< pickle('money') >>>  <<< currentCategoryId >>>
                          
-                        <div>
-                            <li ng-repeat="post in posts | matchIt:posts:currentCategory"> <<< post.title >>> </li>
+                        <div> <h4>What Articles in Category: <<< currentCategoryId >>> with Angular </h4>
+                          <li ng-repeat="post in posts | matchCategory:currentCategoryId | matchContentType:'Application'   "> <<< post.title >>> <<< post.contentType >>> </li>
+                         </div>
+                              
+                              <div> <h4>Application Articles in Category: <<< currentCategoryId >>> with Angular </h4>
+                          <li ng-repeat="post in posts | filter: post.contentType = 'Application' "> <<< post.title >>> <<< post.contentType >>> </li>
+                         </div>
+                              
+                        <div> <h4>Inspiration Articles in Category: <<< currentCategoryId >>> with Angular </h4>
+                          <li ng-repeat="post in posts | filter: post.contentType = 'Inspiration' "> <<< post.title >>> <<< post.contentType >>> </li>
+                         </div>
+                              
+                         <div> <h4>Resources Articles in Category: <<< currentCategoryId >>> with Angular </h4>
+                          <li ng-repeat="post in posts | filter: post.contentType = 'Resources' "> <<< post.title >>> <<< post.contentType >>> </li>
+                         </div>
+                              
+                         <div> <h4>HowTo Articles in Category: <<< currentCategoryId >>> with Angular </h4>
+                          <li ng-repeat="post in posts | matchCategory:currentCategoryId |matchContentType: 'HowTo' | matchhowToLifecycle: 'Launch' "> <<< post.title >>> <<< post.contentType >>> <<< post.howToLifecycle >>></li>
                          </div>
                          
 						<div class="col-md-6">

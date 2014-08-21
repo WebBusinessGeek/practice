@@ -12,6 +12,8 @@ indexCtrl.controller('indexController', function($scope, $http){
     $http.get('/artic/ajax/').success(function(data){
         $scope.posts = data;
         $scope.contentType = $scope.posts.contentType;
+        $scope.minorCat_id = $scope.posts.minorCat_id;
+        
     });
     
     
@@ -41,22 +43,18 @@ indexCtrl.controller('indexController', function($scope, $http){
     $scope.url = window.location.pathname.split('/');
     $scope.currentUrl = $scope.url[3]; 
         
-    $scope.currentCategory = $scope.categoryArray[$scope.currentUrl];
+    $scope.currentCategoryId = $scope.categoryArray[$scope.currentUrl];
     
-    $console.log($scope.currentCategory);
-        
+
+    
         
     });
     
    
+    //i have current category ID
     
-  
-    //pass currentUrl to a function that can match the minorCat_id
+    //i have posts
     
-    
-    
-    
-  
     
 });
 
