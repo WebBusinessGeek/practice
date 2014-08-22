@@ -7,7 +7,7 @@
 
 @section('content')
 	<!--<div  class="content-header">-->
-<div ng-controller="indexController">
+
 		<div class="row">
 			<div class="col-md-12">
 		<div style="color:#FF4C00;"><h1 class="lead" style="font-size: 45px; margin-bottom: -30px;"><<< currentCategoryName >>></h1></div>
@@ -209,7 +209,7 @@
            <br/>
 
 
-</div>
+
 
 
 

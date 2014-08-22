@@ -51,6 +51,9 @@ Route::post('admin/users/logout', 'UserController@logout');
 
 
 
+
+
+
 Route::get('/artic/ajax/', function(){
     
     return Post::all()->toArray();
@@ -62,6 +65,10 @@ Route::get('/category/ajax/', function(){
     return MinorCategory::all()->toArray();
 });
 
+Route::get('/majorcategory/ajax/', function(){
+    
+    return MajorCategory::with('MinorCategory')->get()->toArray();
+});
 
 
 

@@ -16,7 +16,7 @@
     <script src="/js/angular/app.js"></script>
       
     <!-- Angular Controllers -->
-    <script src="/js/angular/controllers/indexcontroller.js"></script>
+    <script src="/js/angular/controllers/blogController.js"></script>
     
     <!-- Angular Services -->
     
@@ -32,10 +32,8 @@
  <!--<link href="/css/starter-template.css" rel="stylesheet">-->
     <!-- Add custom CSS here -->
     <link href="/css/simple-sidebar.css" rel="stylesheet">
+    <link href="/css/index-extras.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="/js/ie-emulation-modes-warning.js"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="/js/ie10-viewport-bug-workaround.js"></script>
@@ -46,61 +44,11 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style>
-    	.open > .dropdown-menu {
-  -webkit-transform: scale(1, 1);
-  transform: scale(1, 1);  
-  
-}
-.open > .dropdown-menu li a {
-  color: #000;  
-}
-.dropdown-menu li a{
-  color: #fff;
-}
-.dropdown-menu {
-  -webkit-transform-origin: top;
-  transform-origin: top;
-  -webkit-animation-fill-mode: forwards;  
-  animation-fill-mode: forwards; 
-  -webkit-transform: scale(1, 0);
-  transform: scale(1, 0);
-  display: block;
-  
-  transition: all 0.2s ease-out;
-  -webkit-transition: all 0.2s ease-out;
-}
-.dropup .dropdown-menu {
-  -webkit-transform-origin: bottom;
-  transform-origin: bottom;  
-}
- 
-.navbar .nav > li > .dropdown-menu:after {
- 
-}
-.dropup > .dropdown-menu:after {
-  border-bottom: 0;
-  border-top: 6px solid rgba(39, 45, 51, 0.9);
-  top: auto;
-  display: inline-block;
-  bottom: -6px;
-  /*content: '';*/
-  position: absolute;
-  left: 50%;
-  border-right: 6px solid transparent;
-  border-left: 6px solid transparent;
-}
-
-.dropdownlink:hover {
-
-	background:#F1F0F0;
-}
     
-    </style>
 </head>
 <body>
 
-    <div id="wrapper" class="container">
+    <div id="wrapper" class="container" ng-controller="blogController">
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper" >
@@ -109,7 +57,7 @@
                 </li><br/>
              <?php $categories = MajorCategory::all();?>
                @foreach($categories as $category)
-                	<div class="dropdown"><li style="height:60px;" ><a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#FFB798;padding-top: 10px;padding-bottom: 10px;"><h4>{{$category->oTitle}}<b class="caret"></b></h4></a>
+                	<div class="dropdown"><li style="height:60px;" ><a href="#" class="dropdown-toggle " data-toggle="dropdown" style="color:#FFB798;padding-top: 10px;padding-bottom: 10px;"><h4>{{$category->oTitle}}<b class="caret"></b></h4></a>
                 		<ul class="dropdown-menu">
                 	<?php $subcategories = $category->MinorCategory;?>
                 		@foreach($subcategories as $subcategory)
@@ -135,6 +83,11 @@
             <!-- Angular test -->
             <input type="text" ng-model="test"> <<< test >>>
             
+            <li ng-repeat="majorCat in majorcategories"> <<< majorCat.oTitle>>> <<<>>>
+                <ul>
+               <li ng-repeat="minor in majorCat.minor_category"> <<< minor.oTitle >>> </li>
+                </ul>
+            </li>
             
             
            @yield('content')
