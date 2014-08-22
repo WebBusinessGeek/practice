@@ -58,15 +58,13 @@ indexCtrl.controller('indexController', function($scope, $http){
          
     $scope.currentCategoryUrl = $scope.categoryArray3[$scope.currentCategoryId];
     
-        
+    $scope.fullUrl = window.location.pathname + '/';
+    
+       
         
     });
     
-   
-    //i have current category ID
-    
-    //i have posts
-    
+  
     
 });
 

@@ -16,204 +16,181 @@
     	</div>
  <!--   </div>-->
 
+            
    					
    				
    					 <div class="row">
         
-                        <<< hands >>> <<< pickle('money') >>>  <<< currentCategoryId >>>
+                      
                          
-                        <div> <h4>What Articles in Category: <<< currentCategoryId >>> with Angular </h4>
-                          <li ng-repeat="post in posts | matchCategory:currentCategoryId | matchContentType:'What' "> <<< post.title >>> <<< post.contentType >>> </li>
-                         </div>
-                              
-                              <div> <h4>Application Articles in Category: <<< currentCategoryId >>> with Angular </h4>
-                          <li ng-repeat="post in posts | matchCategory:currentCategoryId | matchContentType:'Application' "> <<< post.title >>> <<< post.contentType >>> </li>
-                         </div>
-                              
-                        <div> <h4>Inspiration Articles in Category: <<< currentCategoryId >>> with Angular </h4>
-                          <li ng-repeat="post in posts | matchCategory:currentCategoryId | matchContentType: 'Inspiration' "> <<< post.title >>> <<< post.contentType >>> </li>
-                         </div>
-                              
-                         <div> <h4>Resources Articles in Category: <<< currentCategoryId >>> with Angular </h4>
-                          <li ng-repeat="post in posts | matchCategory:currentCategoryId | matchContentType: 'Resources' "> <<< post.title >>> <<< post.contentType >>> </li>
-                         </div>
-                              
-                         <div> <h4>HowTo Articles in Category: <<< currentCategoryId >>> with Angular </h4>
-                          <li ng-repeat="post in posts | matchCategory:currentCategoryId |matchContentType: 'HowTo' | matchhowToLifecycle: 'Launch' "> <<< post.title >>> <<< post.contentType >>> <<< post.howToLifecycle >>></li>
-                         </div>
+                       
                          
 						<div class="col-md-6">
 						
 							<!-- What -->
-							  <h3>What is '{{ $subCategory->oTitle}}'?</h3>
-							  <p class="lead">Let these articles introduce you to '{{ $subCategory->oTitle }}' and its benefits to your business.</p>
-							
-							<ul>
-							{{-- Get all the articles that match the section. Else show no articles --}}
-							<?php $a = 0;?>
-							 @foreach($posts as $post)
-							 	@if($post->contentType == 'What' && $post->is_published == true)
-							 		<li ><a style="color:black;" href="/blog/{{$category->title}}/{{$subCategory->title}}/{{$post->title}}">{{ $post->oTitle }}</a></li>
-							 		<?php $a++; ?>
-							 	@endif
-							 @endforeach
-							 @if($a == 0)
-							 		<li>{{'Sorry no articles yet'}}</li>
-							 @endif
-							</ul>
+							  <h3>What is <<< currentCategoryName >>>?</h3>
+							  <p class="lead">Let these articles introduce you to <<< currentCategoryName >>> and its benefits to your business.</p>
+							 
+                           
+                                <p ng-show="(posts | matchCategory:currentCategoryId | matchContentType:'What' ).length == 0">Sorry no articles yet.</p>
+                                <li ng-repeat="post in posts | matchCategory:currentCategoryId | matchContentType:'What' "> 
+                                    <a href="<<< fullUrl + post.title>>>"> <<< post.oTitle >>> </a>  
+                                </li>
+                           
 							  
-							  
-							 <br/><br/>   
-							<!-- Application -->
-							<h3>Applying '{{ $subCategory->oTitle}}'</h3>
-							  <p class="lead">See examples of '{{ $subCategory->oTitle }}' applied to different buisness models. This should give you a better
-							   understanding of the topic and best practices to utilize.</p>
-							 
-							 <ul>
-							{{-- Get all the articles that match the section. Else show no articles --}}
-							<?php $b = 0;?>
-							 @foreach($posts as $post)
-							 	@if($post->contentType == 'Application' && $post->is_published == true)
-							 		<li><a style="color:black;" href="/blog/{{$category->title}}/{{$subCategory->title}}/{{$post->title}}">{{ $post->oTitle }}</a></li>
-							 		<?php $b++; ?>
-							 	@endif
-							@endforeach
-							@if($b == 0)
-							 		<li>{{'Sorry no articles yet'}}</li>
-							@endif
-							 </ul>
-							 
-							 
 							 <br/><br/>  
+                                
+                                
+                                
+                                
+                                
+							<!-- Application -->
+							<h3>Applying  <<< currentCategoryName >>></h3>
+							  <p class="lead">See examples of <<< currentCategoryName >>> applied to different buisness models. This should give you a better understanding of the topic and best practices to utilize.</p>
+							 
+							 
+                        
+                                <p ng-show="(posts | matchCategory:currentCategoryId | matchContentType:'Application' ).length == 0">Sorry no articles yet.</p>
+                                <li ng-repeat="post in posts | matchCategory:currentCategoryId | matchContentType:'Application' "> 
+                                    <a href="<<< fullUrl + post.title>>>"> <<< post.oTitle >>> </a>   
+                                </li>
+                      
+							 
+							 <br/><br/> 
+                            
+                            
+                            
+                            
+                            
 							<!-- Resources -->
-							<h3>'{{ $subCategory->oTitle}}' Resources</h3>
-							  <p class="lead">Tools and Services that will the increase efficiency of your {{ $subCategory->oTitle }} efforts.</p>
+							<h3> <<< currentCategoryName >>> Resources</h3>
+							  <p class="lead">Tools and Services that will the increase efficiency of your <<< currentCategoryName >>>efforts.</p>
+				            
+                            
+                                <p ng-show="(posts | matchCategory:currentCategoryId | matchContentType: 'Resources' ).length == 0">Sorry no articles yet.</p>
+                                <li ng-repeat="post in posts | matchCategory:currentCategoryId | matchContentType: 'Resources' "> 
+                                    <a href="<<< fullUrl + post.title>>>"> <<< post.oTitle >>> </a>
+                                </li>
+                            
 							
-							<ul>
-							{{-- Get all the articles that match the section. Else show no articles --}}
-							<?php $c = 0;?>
-							 @foreach($posts as $post)
-							 	@if($post->contentType == 'Resources' && $post->is_published == true)
-							 		<li><a style="color:black;" href="/blog/{{$category->title}}/{{$subCategory->title}}/{{$post->title}}">{{ $post->oTitle }}</a></li>
-							 		<?php $c++; ?>
-							 	@endif
-							 	
-							 @endforeach
-							 @if($c == 0)
-							 		<li>{{'Sorry no articles yet'}}</li>
-							 	@endif
-							 </ul>
 							  
 							   
 							<br/><br/>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
 							<!-- Inspiration -->
-							<h3>'{{ $subCategory->oTitle}}' Inspiration</h3>
-							  <p class="lead">We all need inspiration some time. Here is some related to {{ $subCategory->oTitle }}. </p>
+							<h3> <<< currentCategoryName >>> Inspiration</h3>
+							  <p class="lead">We all need inspiration some time. Here is some related to <<< currentCategoryName >>>. </p>
+                                <p ng-show="(posts | matchCategory:currentCategoryId | matchContentType: 'Inspiration' ).length == 0">Sorry no articles yet.</p>
+                                <li ng-repeat="post in posts | matchCategory:currentCategoryId | matchContentType: 'Inspiration' "> 
+                                    <a href="<<< fullUrl + post.title>>>"> <<< post.oTitle >>> </a>
+                                </li>
+                            
 							
-							<ul>
-							{{-- Get all the articles that match the section. Else show no articles --}}
-							<?php $d = 0;?>
-							 @foreach($posts as $post)
-							 	@if($post->contentType == 'Inspiration' && $post->is_published == true)
-							 		<li><a style="color:black;" href="/blog/{{$category->title}}/{{$subCategory->title}}/{{$post->title}}">{{ $post->oTitle }}</a></li>
-							 		<?php $d++; ?>
-							 	@endif
-							 	
-							 @endforeach
-							 @if($d == 0)
-							 		<li>{{'Sorry no articles yet'}}</li>
-							 	@endif
-							</ul>
-						
 						
 						</div><!-- close first column -->
+                                
+                                
+                               
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                
+                                
    
    						<!-- HowTO -->
 					    <div class="col-md-6">
-							<h3>{{ $subCategory->oTitle}} 101:</h3>
-							<p class="lead">Finally learn {{ $subCategory->oTitle }} with these step-by-step guides. You will get a 
-							thorough walkthrough of each phase involved in an optimal {{ $subCategory->oTitle }} endeavor. Enjoy!</p>
+							<h3> <<< currentCategoryName >>> 101:</h3>
+							<p class="lead">Finally learn <<< currentCategoryName >>> with these step-by-step guides. You will get a thorough walkthrough of each phase involved in an optimal <<< currentCategoryName >>>endeavor. Enjoy!</p>
 						
-							<br/>
+						
 							 <!-- How to Research & Planning -->
 							 <h4 class="lead" style="color:#FF4C00;">How to: <small><i>Getting Started.</i></small></h4>
-							 <ul>
-							{{-- Get all the articles that match the section. Else show no articles --}}
-							<?php $e = 0;?>
-							 @foreach($posts as $post)
-							 	@if(($post->contentType == 'HowTo' && $post->is_published == true) && ($post->howToLifecycle == 'Research'|| $post->howToLifecycle == 'Planning'))
-							 		<li><a style="color:black;" href="/blog/{{$category->title}}/{{$subCategory->title}}/{{$post->title}}">{{ $post->oTitle }}</a></li>
-							 		<?php $e++; ?>
-							 	@endif
-							 	
-							 @endforeach
-							 @if($e == 0)
-							 		<li>{{'Sorry no articles yet'}}</li>
-							 @endif
-							</ul>
+							  
+                                <h6>HowTo Research Articles in Category: <<< currentCategoryId >>> </h6>
+                                    <p ng-show="(posts | matchCategory:currentCategoryId |matchContentType: 'HowTo' | matchhowToLifecycle: 'Research' ).length == 0">Sorry no articles yet.</p>
+                                    <li ng-repeat="post in posts | matchCategory:currentCategoryId |matchContentType: 'HowTo' | matchhowToLifecycle: 'Research' ">
+                                        <a href="<<< fullUrl + post.title>>>"> <<< post.oTitle >>> </a>        
+                                    </li> 
+                              
+                                <h6>HowTo Planning Articles in Category: <<< currentCategoryId >>> </h6> 
+                                    <p ng-show="(posts | matchCategory:currentCategoryId |matchContentType: 'HowTo' | matchhowToLifecycle: 'Planning' ).length == 0">Sorry no articles yet.</p>  
+                                    <li ng-repeat="post in posts | matchCategory:currentCategoryId |matchContentType: 'HowTo' | matchhowToLifecycle: 'Planning' "> 
+                                       <a href="<<< fullUrl + post.title>>>"> <<< post.oTitle >>> </a>                                                      </li> 
+                            
+                            
+                            
 							
 							
 							 
 							 <br/>
 							 <!-- How to Construction -->
 							  <h4 class="lead" style="color:#FF4C00;">How to: <small><i>Moving On.</i></small></h4>
-							   <ul>
-							{{-- Get all the articles that match the section. Else show no articles --}}
-							<?php $f = 0;?>
-							 @foreach($posts as $post)
-							 	@if($post->howToLifecycle == 'Construction' && $post->is_published == true)
-										<li><a style="color:black;" href="/blog/{{$category->title}}/{{$subCategory->title}}/{{$post->title}}">{{ $post->oTitle }}</a></li>
-										<?php $f++; ?>
-								@endif
-							 	
-							 @endforeach
-							 @if($f == 0)
-							 		<li>{{'Sorry no articles yet'}}</li>
-							 @endif
-							</ul>
+							 
 							  
-							  
-							  
+							  <h6>HowTo Construction Articles in Category: <<< currentCategoryId >>> </h6>
+                                    <p ng-show="(posts | matchCategory:currentCategoryId |matchContentType: 'HowTo' | matchhowToLifecycle: 'Construction'  ).length == 0">Sorry no articles yet.</p>         
+                                    <li ng-repeat="post in posts | matchCategory:currentCategoryId |matchContentType: 'HowTo' | matchhowToLifecycle: 'Construction' "> 
+                                        <a href="<<< fullUrl + post.title>>>"> <<< post.oTitle >>> </a>
+                                    </li>   
+                              
+                            
 							  
 							  
 							  
 							  <br/>
+                                      
+                                        
+                                        
 							  <!-- How to Launch -->
 							  <h4 class="lead" style="color:#FF4C00;">How to: <small><i>Can't stop now.</i></small></h4>
-							  <ul>
-							{{-- Get all the articles that match the section. Else show no articles --}}
-							<?php $g = 0;?>
-							 @foreach($posts as $post)
-							 	@if($post->howToLifecycle == 'Launch' && $post->is_published == true)
-							 		<li><a style="color:black;" href="/blog/{{$category->title}}/{{$subCategory->title}}/{{$post->title}}">{{ $post->oTitle }}</a></li>
-							 		<?php $g++; ?>
-							 	@endif
-							 	
-							 @endforeach
-							 @if($g == 0)
-							 		<li>{{'Sorry no articles yet'}}</li>
-							 @endif
-							</ul>
+							
 							  
-							  
+                                <h6>HowTo Launch Articles in Category: <<< currentCategoryId >>> </h6>
+                                    <p ng-show="(posts | matchCategory:currentCategoryId |matchContentType: 'HowTo' | matchhowToLifecycle: 'Launch' ).length == 0">Sorry no articles yet.</p>         
+                                    <li ng-repeat="post in posts | matchCategory:currentCategoryId |matchContentType: 'HowTo' | matchhowToLifecycle: 'Launch' "> 
+                                        <a href="<<< fullUrl + post.title>>>"> <<< post.oTitle >>> </a>
+                                    </li>
+                                 
+                                        
+                                        
 							  
 							  <br/>
+                                        
+                                        
+                                        
+                                        
 							  <!--  How to Growth -->
 							  <h4 class="lead" style="color:#FF4C00;">How to: <small><i>What's next?</i></small></h4>
-							<ul>
-							{{-- Get all the articles that match the section. Else show no articles --}}
-							<?php $h = 0;?>
-							 @foreach($posts as $post)
-							 	@if($post->howToLifecycle == 'Growth' && $post->is_published == true)
-							 		<li><a style="color:black;" href="/blog/{{$category->title}}/{{$subCategory->title}}/{{$post->title}}">{{ $post->oTitle }}</a></li>
-							 		<?php $h++; ?>
-							 	@endif
-							 	
-							 @endforeach
-							 @if($h == 0)
-							 		<li>{{'Sorry no articles yet'}}</li>
-							 @endif
-							</ul>
+				
+                                <h6>HowTo Growth Articles in Category: <<< currentCategoryId >>> </h6>
+                                    <p ng-show="(posts  | matchCategory:currentCategoryId |matchContentType: 'HowTo' | matchhowToLifecycle: 'Growth' ).length == 0">Sorry no articles yet.</p>         
+                                    <li ng-repeat="post in posts | matchCategory:currentCategoryId |matchContentType: 'HowTo' | matchhowToLifecycle: 'Growth' "> 
+                                       <a href="<<< fullUrl + post.title>>>"> <<< post.oTitle >>> </a>
+                                    </li>
+                         
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
 							  
 					    </div><!-- Close second column -->
 					    

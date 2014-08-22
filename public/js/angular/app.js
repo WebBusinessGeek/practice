@@ -12,7 +12,4 @@ var setup = angular.module('setup', [], function($interpolateProvider){
 
 
 
-
-
-
 //});//closes wrapping closure function
