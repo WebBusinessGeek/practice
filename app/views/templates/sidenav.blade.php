@@ -55,20 +55,21 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand" style="background: #fff; "><a href="/">WebBusinessGeek<span class="glyphicon glyphicon-home"></span></a>
                 </li><br/>
-             <?php $categories = MajorCategory::all();?>
-               @foreach($categories as $category)
-                	<div class="dropdown"><li style="height:60px;" ><a href="#" class="dropdown-toggle " data-toggle="dropdown" style="color:#FFB798;padding-top: 10px;padding-bottom: 10px;"><h4>{{$category->oTitle}}<b class="caret"></b></h4></a>
-                		<ul class="dropdown-menu">
-                	<?php $subcategories = $category->MinorCategory;?>
-                		@foreach($subcategories as $subcategory)
-                			<li class="lead dropdownlink" style="font-size:14px;" ><a  style="color: #FF4C00;" href="/blog/{{$category->title}}/{{$subcategory->title}}">{{$subcategory->oTitle}}</a></li>
-                		
-                		@endforeach 
-                		</ul>
-                	</li>
+             <div class="dropdown" ng-repeat="majorCat in majorcategories">
+                        <li style="height:60px;" >
+                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" style="color:#FFB798;padding-top: 10px;padding-bottom: 10px;">
+                                <h4> <<< majorCat.oTitle>>> <b class="caret"></b></h4>
+                            </a>
+                        <ul class="dropdown-menu">
+                            <li ng-repeat="minor in majorCat.minor_category" class="lead dropdownlink" style="font-size:14px;">
+                                <a  style="color: #FF4C00;" href="/blog/<<< majorCat.title >>>/<<< minor.title >>>">                                            <<< minor.oTitle >>> 
+                                </a>
+                            </li>
+                        </ul>
+                	   </li>
                 	</div>
-                	<br/><br/>
-                @endforeach
+                	
+                <br/><br/>
                 
                 
             </ul>
@@ -83,12 +84,14 @@
             <!-- Angular test -->
             <input type="text" ng-model="test"> <<< test >>>
             
-            <li ng-repeat="majorCat in majorcategories"> <<< majorCat.oTitle>>> <<<>>>
-                <ul>
-               <li ng-repeat="minor in majorCat.minor_category"> <<< minor.oTitle >>> </li>
-                </ul>
-            </li>
-            
+           
+                
+               
+                	
+              
+                
+         
+        
             
            @yield('content')
 
