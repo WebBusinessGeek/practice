@@ -6,7 +6,16 @@ indexCtrl.controller('blogController', function($scope, $http){
     
     $scope.pickle = function(data){
         return 'pickelmeat'+ data;
+        
+   
+        
+  
+    
     }; 
+        
+    
+  
+    
     
     
     
@@ -50,8 +59,6 @@ indexCtrl.controller('blogController', function($scope, $http){
          
        
     $scope.currentMajorCategoryUrl = $scope.majorcategoryArray3[$scope.currentMajorCategoryId];
-    
-    console.log('!!!!!' + 'Id is ' + $scope.currentMajorCategoryId+ 'Name is '+ $scope.currentMajorCategoryName + 'Url' + $scope.currentMajorCategoryUrl);
     
         
         
@@ -102,7 +109,12 @@ indexCtrl.controller('blogController', function($scope, $http){
    
     $scope.url = window.location.pathname.split('/');
     $scope.currentUrl = $scope.url[3];
-         
+    
+    if($scope.url[4]){
+        $http.get('/artic/ajax/'+$scope.url[4]).success(function(data){
+            console.log(data);
+        });
+    }
         
     $scope.currentCategoryId = $scope.categoryArray[$scope.currentUrl];
     

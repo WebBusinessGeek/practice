@@ -6,7 +6,7 @@
 
 
 @section('content')
-	
+	<p> <<< currentPostId >>> </p>
 
 <div class="moveleft" style=" ">
   <div class="row">
@@ -30,6 +30,11 @@
                
                
 
+                
+                
+                
+                
+                
                 <hr>
 
 	<div id="disqus_thread"></div>

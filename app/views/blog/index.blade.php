@@ -17,6 +17,8 @@
  <!--   </div>-->
 
             
+            <p ng-model="currentPostId"> <<< currentPostId >>> </p>
+            
    					
    				
    					 <div class="row">
@@ -34,7 +36,7 @@
                            
                                 <p ng-show="(posts | matchCategory:currentCategoryId | matchContentType:'What' ).length == 0">Sorry no articles yet.</p>
                                 <li ng-repeat="post in posts | matchCategory:currentCategoryId | matchContentType:'What' "> 
-                                    <a href="<<< fullUrl + post.title>>>"> <<< post.oTitle >>> </a>  
+                                    <a href="<<< fullUrl + post.title>>>" ng-click="showpost(post.id, currentPostId)"> <<< post.oTitle >>> </a>  
                                 </li>
                            
 							  
@@ -52,7 +54,8 @@
                         
                                 <p ng-show="(posts | matchCategory:currentCategoryId | matchContentType:'Application' ).length == 0">Sorry no articles yet.</p>
                                 <li ng-repeat="post in posts | matchCategory:currentCategoryId | matchContentType:'Application' "> 
-                                    <a href="<<< fullUrl + post.title>>>"> <<< post.oTitle >>> </a>   
+                                  
+                                    <a  href="<<< fullUrl + post.title>>>"> <<< post.oTitle >>> </a>  
                                 </li>
                       
 							 

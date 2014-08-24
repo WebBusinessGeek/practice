@@ -59,6 +59,11 @@ Route::get('/artic/ajax/', function(){
     return Post::all()->toArray();
 });
 
+Route::get('/artic/ajax/{article}', function($article){
+    
+    return Post::where('title', '=', $article)->get();
+});
+
 
 Route::get('/category/ajax/', function(){
     
