@@ -94,6 +94,14 @@
         
             
            @yield('content')
+            
+            
+            <?php $query = DB::getQueryLog(); ?>
+            @if($query == null)
+            {{ 'no queries'}}
+            @else
+            {{var_dump($query)}}
+            @endif
 
       <!-- Bootstrap core JavaScript
     ================================================== -->
